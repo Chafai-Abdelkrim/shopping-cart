@@ -36,6 +36,12 @@ function App() {
     },
     [cartItems]
   );
+
+  return (
+      <div className='App'>
+          <Header cartItems={cartItems} setIsCartOpen={setIsCartOpen} />
+      </div>
+  )
 }
 
 export default App;
