@@ -5,3 +5,6 @@ import { addScrollableSelector, disablePageScroll } from 'scroll-lock';
 import { RiReactjsLine, RiShoppingBag2Line } from 'react-icons/ri';
 import Button from './Button';
 import SearchBar from './SearchBar';
+import Transition from './Transition';
+import { Game } from '../types/Game.types';
+
