@@ -38,10 +38,45 @@ function App() {
   );
 
   return (
-      <div className='App'>
-          <Header cartItems={cartItems} setIsCartOpen={setIsCartOpen} />
-      </div>
-  )
+    <div className="App">
+      <Header cartItems={cartItems} setIsCartOpen={setIsCartOpen} />
+      <AnimatePresence exitBeforeEnter>
+        {isCartOpen && (
+          <Cart
+            cartItems={cartItems}
+            setIsCartOpen={setIsCartOpen}
+            removeFromCart={removeFromCart}
+          />
+        )}
+      </AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
+        <Routes location={location} key={location.pathname}>
+          <Route path="*" element={<NotFound />} />
+
+          <Route path="/" element={<Home loadGames={loadGames} />} />
+
+          <Route path="games">
+            <Route
+              index
+              element={
+                <GameList
+                  loadGames={loadGames}
+                  cartItems={cartItems}
+                  addToCart={addToCart}
+                />
+              }
+            />
+            <Route
+              path=":gameId"
+              element={
+                <GameDetails cartItems={cartItems} addToCart={addToCart} />
+              }
+            />
+          </Route>
+        </Routes>
+      </AnimatePresence>
+    </div>
+  );
 }
 
 export default App;
