@@ -14,7 +14,7 @@ interface Game {
   publishers: {
     name: string,
   }[];
-  parent_platform: {
+  parent_platforms: {
     platform: {
       id: number,
       slug: string,
