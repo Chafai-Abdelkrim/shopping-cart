@@ -16,3 +16,5 @@ function Github({ username }: { username: string }) {
     </a>
   );
 }
+
+export default Github;
