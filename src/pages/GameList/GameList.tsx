@@ -4,7 +4,7 @@ import { useIsPresent } from 'framer-motion';
 import { useScrollTo } from 'framer-motion-scroll-to-hook';
 import { useWindowWidth } from '@react-hook/window-size';
 import { Transition, Loading } from '../../components';
-import { NavBar } from '../../components';
+import NavBar from '../../components/NavBar';
 import Grid from './components/Grid';
 import { Game } from '../../types/Game.types';
 
