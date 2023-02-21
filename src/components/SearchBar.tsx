@@ -46,11 +46,10 @@ function SearchBar() {
         onChange={(e) => setInputValue(e.target.value)}
         onFocus={() => setFormMaxWidth(700)}
         onBlur={() => setFormMaxWidth(400)}
-      >
+      />
         <Button type="submit" title="Search">
           <RiSearchLine />
         </Button>
-      </input>
     </motion.form>
   );
 }
