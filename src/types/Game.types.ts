@@ -3,7 +3,7 @@ interface Game {
   slug: string,
   name: string,
   price: number,
-  rating_count: number,
+  ratings_count: number,
   description_raw: string,
   website: string,
   released: string,

@@ -24,7 +24,7 @@ function SearchBar() {
     if (!inputValue) return;
     const searchParams = createSearchParams({ search: inputValue });
     navigate({
-      pathname: '/game',
+      pathname: '/games',
       search: searchParams.toString(),
     });
   };
@@ -47,9 +47,9 @@ function SearchBar() {
         onFocus={() => setFormMaxWidth(700)}
         onBlur={() => setFormMaxWidth(400)}
       />
-        <Button type="submit" title="Search">
-          <RiSearchLine />
-        </Button>
+      <Button type="submit" title="Search">
+        <RiSearchLine />
+      </Button>
     </motion.form>
   );
 }

@@ -30,7 +30,9 @@ function Cart(props: Props) {
     gamesCount = 'No Games On Cart';
   }
 
-  const totatPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
+  const totatPrice = cartItems
+    .reduce((sum, item) => sum + item.price, 0)
+    .toFixed(2);
 
   return (
     <>
@@ -52,25 +54,28 @@ function Cart(props: Props) {
         }}
       >
         <div className="CartHeader">
-            <h3>{gamesCount}</h3>
-            {cartItems.length > 1 && (
-                <Button handleClick={clearCart}>Clear</Button>
-            )}
+          <h3>{gamesCount}</h3>
+          {cartItems.length > 1 && (
+            <Button handleClick={clearCart}>Clear</Button>
+          )}
         </div>
-        <div className='Items'>
-            <AnimatePresence>
-                {cartItems.map((game) => (
-                    <CartItem 
-                    key={`cart-${game.id}`}
-                    game={game}
-                    closeCart={closeCart}
-                    removeFromCart={removeFromCart} />
-                ))}
-            </AnimatePresence>
+        <div className="Items">
+          <AnimatePresence>
+            {cartItems.map((game) => (
+              <CartItem
+                key={`cart-${game.id}`}
+                game={game}
+                closeCart={closeCart}
+                removeFromCart={removeFromCart}
+              />
+            ))}
+          </AnimatePresence>
         </div>
-        <div className='Checkout'>
-            <div>Total: ${totatPrice}</div>
-            <Button>Checkout <RiArrowRightLine /></Button>
+        <div className="Checkout">
+          <div>Total: ${totatPrice}</div>
+          <Button>
+            Checkout <RiArrowRightLine />
+          </Button>
         </div>
       </motion.div>
     </>

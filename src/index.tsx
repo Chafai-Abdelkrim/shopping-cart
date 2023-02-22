@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import App from './App';
 import './styles/index.css';
 
@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <HashRouter>
     <Routes>
-      <Route path="/*" element={<App />} />
+      <Route path='/*' element={<App />} />
     </Routes>
   </HashRouter>
 );

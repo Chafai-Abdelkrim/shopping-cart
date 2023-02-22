@@ -34,22 +34,22 @@ function GameCard({ id, name, backgroundImage, duration, big = false }: Props) {
         transitionTime="1s"
         isResponsive
       >
-          <div className='Overlay'>
-            <AnimatePresence exitBeforeEnter>
-                <motion.h3 initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                    {name}
-                </motion.h3>
-                {big && (
-                    <motion.div 
-                        key={`progress-${id}`}
-                        className='PregressBar'
-                        initial={{ width: 0 }}
-                        animate={{ width: '100%', transition: {duration} }}
-                        exit={{ opacity: 0 }}
-                    />
-                )}
-            </AnimatePresence>
-          </div>
+        <div className="Overlay">
+          <AnimatePresence exitBeforeEnter>
+            <motion.h3 initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              {name}
+            </motion.h3>
+            {big && (
+              <motion.div
+                key={`progress-${id}`}
+                className="PregressBar"
+                initial={{ width: 0 }}
+                animate={{ width: '100%', transition: { duration } }}
+                exit={{ opacity: 0 }}
+              />
+            )}
+          </AnimatePresence>
+        </div>
       </BackgroundImage>
     </motion.div>
   );

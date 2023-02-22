@@ -13,6 +13,7 @@ interface Props {
 const cardDuration = 10;
 
 const cycleArray = (array: unknown[]) => {
+  if (!array) return;
   const newArray = [...array];
   newArray.push(newArray.shift());
   return newArray;
@@ -21,6 +22,7 @@ const cycleArray = (array: unknown[]) => {
 const getRandomItems = (items: unknown[], length: number) => {
   const randomItems = new Set();
   while (randomItems.size < length) {
+    if (!items.length) return;
     const index = Math.floor(Math.random() * items.length);
     randomItems.add(items[index]);
   }
