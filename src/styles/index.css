@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --clr-shark: #2A2F33;
+    --clr-nomad: #BBB6A5;
+    --clr-mantle: #8C9491;
+    --clr-manatee: #8C8C9C;
+    --font-play: 'Play', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;

@@ -1,0 +1,12 @@
+@keyframes loading {
+    0% {
+        background-color: var(--clr-manatee);
+    }
+    50% {
+        background-color: var(--clr-mantle);
+    }
+    100% {
+        background-color: var(--clr-manatee);
+    }
+}
+
