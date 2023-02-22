@@ -114,3 +114,18 @@
     font-weight: 800;
 }
 
+/* BackgroundImage styling */
+.BackgroundImage {
+    height: 100% !important;
+    background-size: cover;
+    background-position: center;
+}
+
+.Wrapper > div:last-child:not(.BackgroundImage) {
+    z-index: 0;
+    animation: loading 1.25s infinite;
+    pointer-events: none;
+}
+.Wrapper > div:last-child:not(.BackgroundImage)::before {
+    content: none;
+}
