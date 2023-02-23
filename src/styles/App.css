@@ -367,6 +367,104 @@
   transform: translateX(5px);
 }
 
+/* GameList page styles */
+.GameList {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+  margin-block: 10px 50px;
+  margin-inline: calc(clamp(10px, 3vw, 50px) + 8px);
+}
+
+.GameList .NoGames {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1;
+  color: aliceblue;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.GameList .Grid {
+  display: flex;
+  gap: clamp(15px, 2.5vw, 25px);
+}
+.GameList .Grid .Column {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(15px, 2.5vw, 25px);
+  flex: 1 1;
+}
+
+.GameCard {
+  background-color: var(--clr-manatee);
+  color: var(--clr-shark);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.GameCard .Image {
+  height: 140px;
+  cursor: pointer;
+}
+
+.GameCard .Info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 20px;
+}
+.GameCard .Info .Button {
+  padding: 0;
+  text-align: left;
+}
+.GameCard .Info .Price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+.GameCard .Info .Price .Button {
+  color: aliceblue;
+}
+.GameCard .Info .Price .Button:hover {
+  color: #ffeba9;
+}
+.GameCard .Info .Price .Added {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+  font-size: 16px;
+  color: lightgreen;
+}
+
+.GameList .Info .Button.Name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.GameList .Info .MoreInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.GameList .Info .MoreInfo .Platforms {
+  display: flex;
+  gap: 8px;
+}
+.GameList .Info .MoreInfo .Platforms svg {
+  color: aliceblue;
+  font-size: 16px;
+}
+.GameList .Info .MoreInfo .Released,
+.GameList .Info .MoreInfo .Genres {
+  font-size: 14px;
+  color: var(--clr-shark);
+}
+
+
 /* footer styles */
 footer {
   display: flex;
