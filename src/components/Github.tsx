@@ -12,7 +12,7 @@ function Github({ username }: { username: string }) {
       title="Check Out My Github"
     >
       <RiGithubLine />
-      {`${nameArray[1]} ${nameArray[0]}}`}
+      {`${nameArray[1]} ${nameArray[0]}`}
     </a>
   );
 }
