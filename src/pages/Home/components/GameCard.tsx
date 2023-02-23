@@ -42,7 +42,7 @@ function GameCard({ id, name, backgroundImage, duration, big = false }: Props) {
             {big && (
               <motion.div
                 key={`progress-${id}`}
-                className="PregressBar"
+                className="ProgressBar"
                 initial={{ width: 0 }}
                 animate={{ width: '100%', transition: { duration } }}
                 exit={{ opacity: 0 }}
