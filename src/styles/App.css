@@ -216,7 +216,7 @@
   left: 0;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.55);
-  filter: blur(5px);
+  filter: blur(10px);
 }
 .Background > div {
   height: 100%;
@@ -237,4 +237,78 @@
   flex-direction: column;
   gap: 20px;
   background-color: var(--clr-shark);
+}
+.CartModal .CartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.CartModal .CartHeader h3 {
+  margin-left: 6px;
+  color: aliceblue;
+  font-size: 28px;
+  font-weight: 800;
+}
+.CartModal .CartHeader .Button {
+  padding-block: 4px;
+}
+
+.Items {
+  margin-inline: -20px;
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.Items .Item {
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background-color: var(--clr-manatee);
+  color: aliceblue;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(185, 204, 255, 0.4);
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform 0.2s;
+}
+.Items .Item:hover {
+  transform: scale(1.03) !important;
+}
+.Items .Item *:first-child {
+  flex: 1 1;
+}
+.Items .Item .Button {
+  padding: 0;
+  font-size: 16px;
+  justify-content: flex-start;
+  text-align: left;
+}
+.Items .Item .Remove {
+  padding: 5px;
+  font-size: 18px;
+  background-color: var(--clr-shark);
+  border-radius: 100vmax;
+}
+
+.Checkout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 8px;
+  font-weight: 600;
+  color: aliceblue;
+}
+.Checkout > div {
+  display: flex;
+  align-items: center;
+}
+.Checkout .Button {
+  padding: 5px;
+  font-size: 20px;
 }
