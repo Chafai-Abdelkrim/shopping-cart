@@ -601,8 +601,54 @@
   display: block;
   position: sticky;
   bottom: 0;
-  background-image: linear-gradient(to bottom, transparent, rgba(27, 27, 27, 0.541));
+  background-image: linear-gradient(to bottom, transparent, rgb(19, 19, 19));
   pointer-events: none;
+}
+.GameDetails .Grid .Info .About > * {
+  padding-top: 10px;
+}
+.GameDetails .Grid .Info .About h4 {
+  color: aliceblue;
+  padding: 0;
+  margin-bottom: 4px;
+  font-size: 24px;
+  font-weight: 800;
+}
+.GameDetails .Grid .Info .About p {
+  color: white;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.GameDetails .Grid .Info .MoreInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 22px 30px;
+  line-height: 1.3;
+  background-color: var(--clr-mantle);
+  color: white;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 0 0 1rem 1rem;
+}
+.GameDetails .Grid .Info .MoreInfo .Expand {
+  align-self: flex-end;
+}
+.GameDetails .Grid .Info .MoreInfo .Expand .Button {
+  padding: 0;
+}
+.GameDetails .Grid .Info .MoreInfo .Expanded {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.GameDetails .Grid .Info .MoreInfo a {
+  margin-top: 4px;
+  display: inline-block;
+  font-size: 16px;
+  color: var(--clr-shark);
 }
 
 /* footer styles */
