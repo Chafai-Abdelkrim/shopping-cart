@@ -132,6 +132,7 @@
   margin-inline: 6px;
   text-align: right;
   color: aliceblue;
+  font-family: var(--font-play);
   font-size: clamp(22px, 5vw, 55px);
   font-weight: 800;
 }
