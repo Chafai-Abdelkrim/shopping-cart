@@ -651,6 +651,36 @@
   color: var(--clr-shark);
 }
 
+.GameDetails .Grid .Price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: fit-content;
+  padding: 16px 30px;
+  background-color: var(--clr-mantle);
+  color: red;
+  border-radius: 1rem;
+  font-size: 18px;
+  font-weight: 500;
+}
+.GameDetails .Grid .Price .Button,
+.GameDetails .Grid .Price .Added {
+  margin-right: -4px;
+  font-size: 22px;
+  font-weight: 500;
+}
+.GameDetails .Grid .Price .Button {
+  padding: 0;
+}
+.GameDetails .Grid .Price .Added {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+  color: lightgreen;
+}
+
 /* footer styles */
 footer {
   display: flex;
@@ -694,5 +724,20 @@ footer a.Button {
   }
   .Home .Grid .Button.Store {
     grid-column: 1 / 4;
+  }
+
+  .GameDetails .Grid {
+    grid-template-columns: 1fr;
+  }
+  .Carousel {
+    order: -2;
+    grid-row: 1 / 2;
+    min-height: clamp(200px, 50vw, 360px);
+  }
+  .Info .About {
+    max-height: 220px;
+  }
+  .Price {
+    order: -1;
   }
 }
