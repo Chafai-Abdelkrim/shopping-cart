@@ -10,6 +10,28 @@
   }
 }
 
+/* Scrollbar CSS */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #8c9491 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #8c9491;
+    border-radius: 10px;
+    border: 0px none #ffffff;
+  }
+
 .App {
   min-height: 100vh;
   display: flex;
@@ -464,6 +486,124 @@
   color: var(--clr-shark);
 }
 
+/* Game Details styles */
+.GameDetails {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+  margin-block: 10px 30px;
+  margin-inline: calc(clamp(10px, 3vw, 50px) + 8px);
+}
+
+.GameDetails .Grid {
+  display: grid;
+  grid-template-columns: 1fr max(26vw, 300px);
+  grid-template-rows: 1fr min-content;
+  gap: clamp(15px, 2.5vw, 25px);
+  flex: 1 1;
+}
+.GameDetails .Grid .Carousel {
+  grid-row: 1 / 3;
+  position: relative;
+  background-color: var(--clr-manatee);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.GameDetails .Grid .Carousel .Items {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  height: 100%;
+  cursor: grab;
+  overflow: visible;
+}
+.GameDetails .Grid .Carousel .Items:active {
+  cursor: grabbing;
+}
+.GameDetails .Grid .Carousel .Items .Image {
+  height: 100%;
+  min-width: calc(100% + 2.2rem);
+}
+
+.GameDetails .Grid .Carousel .Dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: min(1.5vw, 20px);
+  padding: 14px 18px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--clr-shark);
+  border-radius: 10px;
+  opacity: 0.8;
+  transition: opacity 0.5s;
+}
+.GameDetails .Grid .Carousel .Dots:hover {
+  opacity: 1;
+}
+.GameDetails .Grid .Carousel .Dots .Dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 100vmax;
+  background-color: rgb(129, 127, 127);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.GameDetails .Grid .Carousel .Dots .Dot:not(.active):hover {
+  background-color: rgb(235, 235, 235);
+}
+.GameDetails .Grid .Carousel .Dots .Dot.active {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 16px;
+  background-color: coral;
+}
+.GameDetails .Grid .Carousel .Button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  font-size: 3.5rem;
+}
+.GameDetails .Grid .Carousel .Button:first-child {
+  left: 0;
+}
+.GameDetails .Grid .Carousel .Button:last-child {
+  right: 0;
+}
+
+.GameDetails .Grid .Info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.GameDetails .Grid .Info .About {
+  max-height: 300px;
+  padding: 1rem;
+  padding-bottom: 0;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.55);
+  flex: 1 1;
+  overflow-y: auto;
+  border-radius: 1rem 1rem 0 0;
+}
+.GameDetails .Grid .Info .About::after {
+  content: '';
+  height: 50px;
+  width: 100%;
+  margin-top: -20px;
+  display: block;
+  position: sticky;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, transparent, rgba(27, 27, 27, 0.541));
+  pointer-events: none;
+}
 
 /* footer styles */
 footer {
