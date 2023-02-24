@@ -13,10 +13,12 @@
 ## 📝 Description
 My take on building a shopping cart for a game store.<br>
 -I made this app with react.<br>
--I also used a lot of usefull react hooks.<br>
--And styled with Css.
+-Used the Framer Motion react librery for animation.<br>
+-Also used the React Router Dom for routing.<br>
+-And styled the pages with Css.
 
 ## 🛠️ Built with
  * CSS.
  * React.
- * React Hooks.
+ * React-Router-Dom.
+ * Framer-Motion.
